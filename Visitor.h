@@ -9,7 +9,7 @@ class visitor {
      string visitorname;
      int ticketbought;
      public:
-     void display();
+     void displayinfo();
      visitor();
      visitor(string name);
      ~visitor();
