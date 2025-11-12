@@ -3,7 +3,14 @@
 
 #include "Animal.h"
 
-//define class bird here 
+class bird: public Animal {
+    private:
+    float wingspan;
+public:
+    bird();
+    bird(float wingspan);
+    ~bird();
+};
 
 
 
