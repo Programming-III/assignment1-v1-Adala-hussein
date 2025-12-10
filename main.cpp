@@ -38,7 +38,21 @@ void enclosure::addAnimal(Animal *animal) {
         cout<< getName<<endl;
         cout<<getAge<<endl;
     }
-    
+    Animal&operator+=(const enclosure& e){
+        this->animal+=e;
+    }
+    ostream& operator<<(ostream& out, const enclosure& e) {
+    out<< e.capacity << endl;
+    out <<  e.currentcount << endl;
+    for (int i = 0; i < e.currentcount; i++) {
+        e.animals[i]->display();
+    }
+}
+    Animal* enclosure::operator[](int index) {
+    if (index >= 0 && index < currentcount) {
+        return animals[index];
+    }
+}
     void Animal::Animal(string name, int age, bool ishungry) {
         this->name=name;
         this->age=age;
@@ -61,7 +75,20 @@ void enclosure::addAnimal(Animal *animal) {
 };
 
 int main() {
-    
+     bird* b = new bird("asfor", 5, true, 2.5);
+     reptile* r = new reptile("so7lya", 3, false, false);
+     mammal *m=new mammal(
+    cout << *b << endl;
+    cout << *r << endl;
+    enclosure enc(3);
+    enc+= b;
+    enc.addAnimal(r);
+
+    Animal* animal = enc[0];
+    if (animal != nullptr) {
+        animal->display();
+    }
+    cout << enc<< endl;
     
     return 0;
 }
