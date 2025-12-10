@@ -80,15 +80,15 @@ int main() {
      mammal *m=new mammal("blue");
     cout << *b << endl;
     cout << *r << endl;
+    cout << *m << endl;
     enclosure enc(3);
     enc+= b;
     enc.addAnimal(r);
-
+    enc==m;
     Animal* animal = enc[0];
     if (animal != nullptr) {
         animal->display();
     }
     cout << enc<< endl;
-    
     return 0;
 }
