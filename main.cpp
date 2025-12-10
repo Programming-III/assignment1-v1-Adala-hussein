@@ -77,7 +77,7 @@ void enclosure::addAnimal(Animal *animal) {
 int main() {
      bird* b = new bird("asfor", 5, true, 2.5);
      reptile* r = new reptile("so7lya", 3, false, false);
-     mammal *m=new mammal(
+     mammal *m=new mammal("blue");
     cout << *b << endl;
     cout << *r << endl;
     enclosure enc(3);
