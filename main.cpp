@@ -15,6 +15,17 @@ void Animal::display() {
 void Animal::feed() {
 
 }
+ostream& operator<<(ostream& os, const Animal& a) {
+    os << "Animal name: " << a.name << endl;
+    os << "Animal age: " << a.age << endl;
+    os << "Is hungry: " << (a.ishungry ? "Yes" : "No") << endl;
+    return os;
+}
+bool Animal::operator==(const Animal& other) const {
+    return this->name == other.name;
+}
+
+
 void enclosure::addAnimal(Animal *animal) {
     Animal* newanimal=new Animal[currentcount+1];
     for (int i=0;i<currentcount;i++) {
@@ -27,6 +38,7 @@ void enclosure::addAnimal(Animal *animal) {
         cout<< getName<<endl;
         cout<<getAge<<endl;
     }
+    
     void Animal::Animal(string name, int age, bool ishungry) {
         this->name=name;
         this->age=age;
