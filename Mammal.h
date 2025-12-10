@@ -10,7 +10,7 @@ public:
     mammal();
     mammal(string furcolor);
     ~mammal();
-
+void sound();
 };
 
 
