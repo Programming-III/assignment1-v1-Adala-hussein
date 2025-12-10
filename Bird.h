@@ -10,6 +10,7 @@ public:
     bird();
     bird(float wingspan);
     ~bird();
+void sound();
 };
 
 
