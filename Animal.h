@@ -19,6 +19,7 @@ class Animal {
     ~Animal();
     friend ostream& operator<<(ostream& out, const Animal& a);
     bool operator==(const Animal& other) const;
+    virtual void sound();
 };
 
 
