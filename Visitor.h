@@ -13,6 +13,7 @@ class visitor {
      visitor();
      visitor(string name);
      ~visitor();
+friend ostream& operator<<(ostream& out, const visitor & v);
  };
 
 
