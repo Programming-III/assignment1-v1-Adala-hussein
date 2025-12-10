@@ -14,6 +14,10 @@ public:
     void displayAnimal();
     enclosure(Animal* animal, int capacity);
     ~enclosure();
+  Animal&operator+=(
+  Animal* operator[](int index);
+  friend ostream& operator<<(ostream& out, const enclosure& e);
+  ;
 
 
 
