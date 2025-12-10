@@ -10,6 +10,7 @@ public:
     reptile();
     ~reptile();
     reptilr(bool isvenomous);
+void sound();
 };
 
 
